@@ -1,9 +1,19 @@
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 
 import './App.css'
 import Name from "./Name"
 
 function Child() {
+
+  // how to handle types when the function is async
+
+   useEffect(()=>{
+        loadCards()
+    },[])
+
+   async function loadCards():Promise<number>{
+              return 1 
+    }
   
 const name : string = "abhishek";
 const [count,setCount] = useState(0)
